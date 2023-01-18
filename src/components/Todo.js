@@ -23,11 +23,11 @@ export default function Todo() {
     }
     return(
         <div>
-            <h1>Todo:</h1>
+            
             <h3>Description: {todo.description}</h3>
            <h4>  Complete: <input type='checkbox'
             defaultChecked={todo.complete}/></h4>
-            <button onClick={() => {nav('/${id}/edit')}}>Edit</button>
+            <button onClick={() => {nav(`/${id}/edit`)}}>Edit</button>
             <button onClick={deleteTheTodo}>Delete</button>
             <button onClick={() => {nav('/')}}>Main</button>
         </div>

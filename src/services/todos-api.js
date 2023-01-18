@@ -16,12 +16,12 @@ export const getTodo = (id) => {
 }
 //EDIT TODO
 export const editTodo = (id, updatedTodo) => {
-    const URL = `${baseURL}/${id}`
+    const URL = `${baseURL}/${id}`;
     const response = axios.put(URL, updatedTodo)
     return response
 }
 
-// CREATE THE  TODO (new todo)
+// CREATE THE TODO (new todo)
 export const NewTodo = (todo) => {
     const URL = baseURL
     const response =axios.post(URL, todo)

@@ -13,16 +13,17 @@ export default function EditTodo() {
         .then(res => setData(res.data))
     }, [])
 
-    const editTodo = e => {
+    const editTheTodo = e => {
         e.preventDefault()
-        const updatedTodo = {description:e.target.description.value, complete: e.target.complete.checked}
+        const updatedTodo = {description: e.target.description.value, complete: e.target.complete.checked}
         editTodo(id, updatedTodo)
         nav(`/${id}`)
     }
+   
     return (
         <div>
-            <form onSubmit={editTodo}>
-                Description: <input type='text' name='description' defaultValue={data.description}/>
+            <form onSubmit={editTheTodo}>
+                Description: <input type='text' name='description' defaultValue={data.description} />
                 Complete:<input type='checkbox' name='complete' defaultChecked={data.complete} />
                 <input type='submit'/>
                 <button onClick={() => {nav('/')}}>Main</button>
